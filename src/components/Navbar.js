@@ -3,6 +3,13 @@ import logo from "../assets/logo.png";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const Navbar = () => {
+
+    /*const products = {
+        { name: 'cerveza', id: 0 },
+        { name: 'vodka', id: 1},
+        { name: 'coca cola', id: 2},
+    }*/
+
     return (
         <header style={styles.container}>
             <img style={styles.imagen} src={logo} alt="sake" width={40} />

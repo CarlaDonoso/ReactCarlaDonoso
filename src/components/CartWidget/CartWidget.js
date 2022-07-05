@@ -16,11 +16,36 @@ export const Carrito = ({ miContador }) => {
 
     return (
         <>
-            <div>Producto</div>
-            <div>Cantidad {counter}</div>
-            <button onClick={resetear}>Reset</button>
-            <button onClick={handlerClick}>Comprar</button>
-            <button onClick={restar}>Quitar</button>
+            <div style={styles.container}>Producto
+            <div style={styles.botones}>Cantidad {counter}</div>
+            <button onClick={resetear} style={styles.botones}>Reset</button>
+            <button onClick={handlerClick} style={styles.botones}>Comprar</button>
+            <button onClick={restar}style={styles.botones}>Quitar</button>
+            </div>
+
         </>
     );
 };
+
+export default Carrito;
+
+const styles = {
+    botones: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        justifyItems: 'start',
+        alignContent: 'center',
+        textAlign: 'center',
+        marginBottom: 20,
+        paddingLeft: 20,
+        
+    },
+    container:{
+        margin: 20,
+        padding: 20,
+        marginBottom: 20,
+        paddingLeft: 20,
+        paddingRight: 20,
+        marginTop: 20,
+    },
+}
