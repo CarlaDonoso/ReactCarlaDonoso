@@ -8,11 +8,6 @@ const Container = () => {
                 <h2>Bebidas</h2>
                 <h2>Aperitivos</h2>
                 <h2>Bebidas sin alcohol</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quia voluptate, debitis sit animi, ipsa at inventore nihil fugiat placeat architecto cupiditate id</p>
-                
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quia voluptate, debitis sit animi, ipsa at inventore nihil fugiat placeat architecto cupiditate id</p>
-                
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quia voluptate, debitis sit animi, ipsa at inventore nihil fugiat placeat architecto cupiditate id</p>
             </div>
         </>
     );
@@ -30,15 +25,7 @@ const styles = {
         alignContent: 'center',
         textAlign: 'center',
         marginBottom: 20,
-    },
-
-    navStyle: {
-        display: 'flex',
-        justifyContent: 'space-between',
-    },
-
-    imagen: {
-        width: '10%',
+        background: '#2d8065'
     },
 
     anchors: {

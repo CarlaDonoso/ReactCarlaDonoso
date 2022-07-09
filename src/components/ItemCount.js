@@ -15,6 +15,10 @@ export const Component = ({ miContador }) => {
         setCounter(0)
     }
 
+    /*const onAdd = () => {
+        onAdd(counter);
+    }*/
+
     return (
         <>
             <div style={styles.container}>Producto
@@ -32,15 +36,11 @@ export default Component;
 
 const styles = {
     botones: {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        justifyItems: 'start',
-        alignContent: 'center',
-        textAlign: 'center',
-        marginBottom: 20,
-        paddingLeft: 20,
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignContent: 'center',
+        },
         
-    },
     container:{
         margin: 20,
         padding: 20,

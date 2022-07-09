@@ -1,20 +1,27 @@
 
 import Navbar from './components/Navbar';
-import './App.css';
-import { Component } from './components/ItemCount';
 import Container from './components/ItemListContainer';
 import { Carrito } from './components/CartWidget/CartWidget';
-
-
+import { Product, Productfernet, ProductVodka } from './components/ItemList';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
   return (
+    <BrowserRouter>
     <>
 <Navbar/>
+<Routes>
+<Route path='/'>
+<Product/><Carrito/>
+</Route>
 <Container/>
-<Component/>
+<ProductVodka/>
 <Carrito/>
+<Productfernet/>
+<Carrito/>
+</Routes>
 </>
+</BrowserRouter>
   );
 }
 

@@ -1,7 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import logo from "../assets/logo.png";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
 
     /*const products = {
@@ -13,11 +14,11 @@ const Navbar = () => {
     return (
         <header style={styles.container}>
             <img style={styles.imagen} src={logo} alt="sake" width={40} />
-            <h1 style={styles.title}>Nomikai</h1>
+            <h1>Nomikai</h1>
             <nav style={styles.navStyle}>
-                <a style={styles.anchors} href="">
+                <a style={styles.anchors} href=""><Link to={'/'}>
                     Home
-                </a>
+                </Link></a>
                 <a style={styles.anchors} href="">
                     Productos
                 </a>
@@ -49,17 +50,13 @@ const styles = {
     },
 
     imagen: {
-        width: '10%',
+        width: '12%',
     },
 
     anchors: {
         margin: 30,
         textDecoration: 'none',
         color: '#000000',
-    },
-    title:{
-        background: '#ffffff',
-        borderRadius: '20%'
     },
     carrito: {
         display: 'flex',

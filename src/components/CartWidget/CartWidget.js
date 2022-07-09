@@ -47,5 +47,6 @@ const styles = {
         paddingLeft: 20,
         paddingRight: 20,
         marginTop: 20,
+        background: '#4d5754',
     },
 }
