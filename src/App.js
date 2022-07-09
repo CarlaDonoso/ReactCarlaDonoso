@@ -10,16 +10,12 @@ function App() {
     <BrowserRouter>
     <>
 <Navbar/>
-<Routes>
-<Route path='/'>
-<Product/><Carrito/>
-</Route>
 <Container/>
+<Product/><Carrito/>
 <ProductVodka/>
 <Carrito/>
 <Productfernet/>
 <Carrito/>
-</Routes>
 </>
 </BrowserRouter>
   );
