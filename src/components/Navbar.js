@@ -1,35 +1,32 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import logo from "../assets/logo.png";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { Link } from "react-router-dom";
-const Navbar = () => {
+import CartWidget from "./CartWidget";
 
-    /*const products = {
-        { name: 'cerveza', id: 0 },
-        { name: 'vodka', id: 1},
-        { name: 'coca cola', id: 2},
-    }*/
+
+const Navbar = () => {
 
     return (
         <header style={styles.container}>
-            <img style={styles.imagen} src={logo} alt="sake" width={40} />
-            <h1>Nomikai</h1>
+            <img style={styles.imagen} src={logo} alt="sake" />
+            <h1 style={styles.title}>Nomikai</h1>
             <nav style={styles.navStyle}>
-                <a style={styles.anchors} href=""><Link to={'/'}>
+                <li style={styles.anchors}>
                     Home
-                </Link></a>
-                <a style={styles.anchors} href="">
+                </li>
+                <li style={styles.anchors}>
                     Productos
-                </a>
-                <a style={styles.anchors} href="">
+                </li>
+                <li style={styles.anchors}>
                     Envios
-                </a>
-                <a style={styles.anchors} href="">
+                </li>
+                <li style={styles.anchors}>
                     Contacto
-                </a>
+                </li>
+
+                <CartWidget/>
+
             </nav>
-            <ShoppingCartIcon sx={{ fontSize: 40 }} style={styles.carrito} />
         </header>
     );
 };
@@ -41,7 +38,7 @@ const styles = {
         display: 'flex',
         justifyContent: 'space-between',
         alingItems: 'center',
-        background: '#6be8a5',
+        background: '#0e344c',
     },
 
     navStyle: {
@@ -50,16 +47,17 @@ const styles = {
     },
 
     imagen: {
-        width: '12%',
+        width: '5%',
     },
 
     anchors: {
         margin: 30,
         textDecoration: 'none',
-        color: '#000000',
+        color: '#ffffff',
     },
-    carrito: {
-        display: 'flex',
-        justifyContent: 'space-between',
-    },
+    title: {
+        marginTop: 20,
+        color: '#ffffff',
+        fontSize: 0,
+    }
 };

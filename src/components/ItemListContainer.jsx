@@ -1,21 +1,24 @@
-import React from "react";
+//import { formControlClasses } from "@mui/material";
 
-const Container = () => {
+import React from "react";
+import Contador from './ItemCount';
+import ItemList from "./ItemList";
+
+const ItemListContainer = () => {
+
 
     return (
-        <>
-            <div style={styles.producto}>
-                <h2>Bebidas</h2>
-                <h2>Aperitivos</h2>
-                <h2>Bebidas sin alcohol</h2>
-            </div>
-        </>
+        <div>
+            <ItemList />
+            <Contador stock={5} />
+            
+        </div>
     );
 };
 
-export default Container;
+export default ItemListContainer;
 
-const styles = {
+/*const styles = {
     producto: {
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 1fr)',
@@ -42,3 +45,4 @@ const styles = {
         justifyContent: 'space-between',
     },
 };
+*/

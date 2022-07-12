@@ -1,52 +1,54 @@
+import React, { useState, useEffect } from "react";
 
-import React, { useState } from "react"
-
-export const Component = ({ miContador }) => {
+export const Contador = ({ stock }) => {
     const [counter, setCounter] = useState(0);
-    const handlerClick = () => {
-        setCounter(counter + 1);
-    }
+    const sumar = () => {
+        counter < stock && setCounter(counter + 1);
+        counter >= stock && alert("No se puede agregar mas");
+    };
 
     const restar = () => {
-        setCounter(counter -1)
-    }
+        setCounter(Math.max(counter - 1, 0));
+    };
 
-    const resetear = () => {
-        setCounter(0)
-    }
-
-    /*const onAdd = () => {
-        onAdd(counter);
-    }*/
+    const onAdd = () => {
+        alert("Gracias por tu compra!");
+    };
 
     return (
         <>
-            <div style={styles.container}>Producto
-            <div style={styles.botones}>Cantidad {counter}</div>
-            <button onClick={resetear} style={styles.botones}>Reset</button>
-            <button onClick={handlerClick} style={styles.botones}>Comprar</button>
-            <button onClick={restar}style={styles.botones}>Quitar</button>
+            <div className="flex gap-6 py-6 px-10 bg-slate-500">
+                <button onClick={sumar} style={styles.botones}>
+                    +
+                </button>
+                <button onClick={onAdd}>Comprar {counter}</button>
+                <button onClick={restar} style={styles.botones}>
+                    -
+                </button>
             </div>
-
         </>
     );
 };
 
-export default Component;
+export default Contador;
 
 const styles = {
     botones: {
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignContent: 'center',
-        },
-        
-    container:{
-        margin: 20,
-        padding: 20,
-        marginBottom: 20,
+        display: "flex",
+        background: "#bddaeb",
+        paddingTop: 10,
+        paddingBottom: 10,
         paddingLeft: 20,
         paddingRight: 20,
-        marginTop: 20,
     },
-}
+    container: {
+        display: "flex",
+        alignContent: "center",
+        textAlign: "center",
+        background: "#1c6998",
+        paddingTop: 10,
+        paddingBottom: 10,
+        paddingLeft: 20,
+        paddingRight: 20,
+    },
+};
