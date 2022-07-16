@@ -7,3 +7,5 @@ Aqui podras agregar al carrito los productos que desees y procesar la compra de 
 se incorpora un contenedor para presentar los futuros productos con sus respectivos contadores de cantidades.
 
 Se agrega contadores, productos con imagenes, precios y descripcion
+
+Se configuran las rutas del sitio
