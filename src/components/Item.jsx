@@ -6,6 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Contador from './ItemCount';
+import { Link } from "react-router-dom";
 
 
 export default function MediaCard({ product }) {
@@ -16,7 +17,7 @@ export default function MediaCard({ product }) {
                 component="img"
                 height="140"
                 image={product.imagenURL}
-                alt="green iguana"
+                alt="producto"
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" style={styles.producto}>
@@ -28,7 +29,9 @@ export default function MediaCard({ product }) {
                 <Contador stock={5} />
             </CardContent>
             <CardActions>
+                <Link to="">
                 <Button size="small">Mas info</Button>
+                </Link>
             </CardActions>
         </Card>
         
@@ -36,9 +39,9 @@ export default function MediaCard({ product }) {
 }
 
 const styles = {
-
     producto: {
-        background: '#d3e6f2'
+        background: '#d3e6f2',
+        
     },
 
 };

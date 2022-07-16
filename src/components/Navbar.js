@@ -2,31 +2,36 @@
 import React from "react";
 import logo from "../assets/logo.png";
 import CartWidget from "./CartWidget";
-
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
+    const categorias = [
+        { name: "Home", id: 0, route: "/categoria/Home" },
+        { name: "BebidasSinAlcohol", id: 1, route: "/categoria/BebidasSinAlcohol" },
+        { name: "BebidasConAlcohol", id: 2, route: "/categoria/BebidasConAlcohol" },
+        { name: "Contacto", id: 3, route: "/categoria/Contacto" },
+    ]
+
     return (
         <header style={styles.container}>
-            <img style={styles.imagen} src={logo} alt="sake" />
+
+            <Link to="/">
+                <img style={styles.imagen} src={logo} alt="sake" />
+            </Link>
             <h1 style={styles.title}>Nomikai</h1>
             <nav style={styles.navStyle}>
-                <li style={styles.anchors}>
-                    Home
-                </li>
-                <li style={styles.anchors}>
-                    Productos
-                </li>
-                <li style={styles.anchors}>
-                    Envios
-                </li>
-                <li style={styles.anchors}>
-                    Contacto
-                </li>
 
-                <CartWidget/>
+                {categorias.map((categoria) => <NavLink key={categoria.id} style={styles.anchors} to={categoria.route}>
+                    {categoria.name}
+                </NavLink>)}
 
+                <Link to="/cart">
+                    <CartWidget />
+                </Link>
             </nav>
+
+
         </header>
     );
 };
@@ -47,7 +52,7 @@ const styles = {
     },
 
     imagen: {
-        width: '5%',
+        width: '20%',
     },
 
     anchors: {
@@ -56,8 +61,8 @@ const styles = {
         color: '#ffffff',
     },
     title: {
-        marginTop: 20,
+        marginTop: 10,
         color: '#ffffff',
-        fontSize: 0,
+        fontSize: 50,
     }
 };
